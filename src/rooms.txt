@@ -1,0 +1,30 @@
+1
+Beginning
+You are standing at the end of a road before a dark and dank cave. The forest is covering the road lending a dark and
+spooky aspect to the road. You hear a low wailing that seems to be coming from the cave.
+---
+WEST 2
+----
+----
+2
+Entrance
+You have entered a dark, low cave that seems to lead to a slightly larger cavern to the west. Strangely you see a faint
+glow coming from the east.
+----
+EAST 1
+WEST 3
+----
+1
+----
+3
+Cavern
+You enter a large cavern. You are surprised to find that the walls of the cave are glowing so you have no pproblem
+seeing the large stalactites that have formed. To the south you hear the sound of rushing water. To the north you hear
+strange sounds that sound like someone with a broken heart. You see as set of stairs at the west end of the cavern.
+----
+EAST 2
+NORTH 4
+SOUTH 5
+DOWN 6
+----
+2

@@ -1,0 +1,11 @@
+1
+Torch
+A guttering torch that sheds a little light
+
+2
+Rusty Sword
+A sword that looks like it may fall apart when you touch it
+
+3
+Potion
+A mysterious potion that shimmers with magical energy
