@@ -1,7 +1,22 @@
+package model;
+
+import controller.Room;
+
 import java.io.*;
 import java.util.*;
 
+//RoomDB
 public class RoomLoader {
+
+    private Map<String, Room> rooms;
+
+    public RoomLoader(String fileName) {
+
+        rooms = new HashMap<>();
+        loadRoomsFromFile(fileName);
+    }
+
+
     public static Map<String, Room> loadRoomsFromFile(String filename) {
         Map<String, Room> rooms = new HashMap<>();
 

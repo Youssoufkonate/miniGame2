@@ -1,3 +1,8 @@
+package controller;
+
+import model.ItemLoader;
+import model.RoomLoader;
+
 import java.util.*;
 
 public class TextAdventureGame {
@@ -6,11 +11,18 @@ public class TextAdventureGame {
     private Scanner scanner;
 
 
-    public TextAdventureGame() {
-        initializeGame(); // Call initializeGame() in the constructor to set up the game
+    public TextAdventureGame(Player pl, Scanner scanner ){
+        this.player = pl;;
+        this.scanner = scanner;
+        initializeGame();
     }
 
+
     private void initializeGame() {
+
+
+       RoomLoader roomLoader = new RoomLoader("room.txt");
+
         // Create rooms
         Room entrance = new Room("Entrance", "You are standing at the entrance of the castle.");
         Room hall = new Room("Hall", "You are in a grand hall with chandeliers hanging from the ceiling.");
@@ -27,7 +39,7 @@ public class TextAdventureGame {
 
     }
 
-    public void Gameplay() {
+    public void gameplay() {
         if (player != null) {
             Room currentRoom = player.getCurrentRoom();
             System.out.println("You are currently in: " + currentRoom.getName());
@@ -35,7 +47,7 @@ public class TextAdventureGame {
 
             // Perform other game logic using currentRoom and player
         } else {
-            System.out.println("Player is not initialized. Cannot proceed.");
+            System.out.println("controller.Player is not initialized. Cannot proceed.");
 
         }
     }
@@ -150,7 +162,7 @@ public class TextAdventureGame {
         }
 
         if (!found) {
-            System.out.println("Item '" + itemName + "' not found in the room.");
+            System.out.println("controller.Item '" + itemName + "' not found in the room.");
         }
     }
 
@@ -171,7 +183,7 @@ public class TextAdventureGame {
             currentRoom.removeItem(itemToRemove);
             System.out.println(itemName + " has been picked up from the room and added to your inventory.");
         } else {
-            System.out.println("Item '" + itemName + "' not found in the room.");
+            System.out.println("controller.Item '" + itemName + "' not found in the room.");
         }
     }
 
@@ -190,7 +202,7 @@ public class TextAdventureGame {
         }
 
         if (itemToRemove == null) {
-            System.out.println("Item '" + itemName + "' not found in your inventory.");
+            System.out.println("controller.Item '" + itemName + "' not found in your inventory.");
         }
     }
 
@@ -207,8 +219,5 @@ public class TextAdventureGame {
         }
     }
 
-    public static void main(String[] args) {
-        TextAdventureGame game = new TextAdventureGame("rooms.txt", "items.txt");
-        game.Gameplay();
-    }
+
 }
